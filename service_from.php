@@ -1,22 +1,22 @@
 <?php
 	$host = "localhost";
 	$user = "root";
-	$psd = "";
+	$password = "";
 	$db = "event";
 
-	$sql = mysqli_connect($host, $user,$psd,$db);
+	$con = mysqli_connect($host,$user,$password,$db);
+	//mysqli_select_db($db);
 
-	if(isset($_POST['email']))
-	{
-		$em = $_POST['email'];
-		$pwd = $_POST['password'];
+	if(isset($_POST['email'])){
+		$em= $_POST['email'];
+		$pd=$_POST['password'];
 
+		$sql = "select * from loginform where Email ='$em' and Pword ='$pd'";
 
-		$sql1 = "select * from loginfrom where Email = '$em' and Pword = '$pwd'";
+		$result = mysqli_query($con,$sql);
+		$row = mysqli_num_rows($result);
 
-		$result = mysqli_query($sql, $sql1);
-
-		if(mysqli_num_rows($result)){
+		if($row>0){
 			echo "You have Successfully Logged in";
 			exit();
 		}
@@ -27,4 +27,7 @@
 			exit();
 		}
 	}
+
+	mysqli_close();
+
 ?>
