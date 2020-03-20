@@ -10,16 +10,16 @@
 	if(isset($_POST['email'])){
 		$em= $_POST['email'];
 		$pd=$_POST['password'];
+		$pwd = md5($pd);
 
-		$sql = "select * from loginform where Email ='$em' and Pword ='$pd'";
+		$sql = "select * from member where Email ='$em' and Password ='$pwd'";
 
 		$result = mysqli_query($con,$sql);
 		$row = mysqli_num_rows($result);
 
 		if($row>0){
 			echo "You have Successfully Logged in";
-			exit();
-		}
+			exit();		}
 
 		else
 		{

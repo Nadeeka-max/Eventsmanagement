@@ -11,63 +11,93 @@
 	</div>
 
 	<form method = "POST" action="register.php">
+
 		<?php include('errors.php');?>
-
-		<div>
+		<table>
+		<tr>	
+		<td>	
 			<label>Username</label>
-			<input type="text" name="uname" value= "<?php echo $uname; ?>">
-		</div>
+		</td>
+		<td>
+			<input type="text" name="uname" value= "">
+		</td>
+		</tr>
 
-
-		<div>
+		<tr>
+		<td>
 			<label>Field</label>
-			<select>
-				<option value = "1" name = "field"></option>
-              	<option value = "2" name = "field">Transfrot</option>
-               	<option value = "3" name = "field">Halls </option>
-               	<option value = "4" name = "field">cretering</option>
-               	<option value = "5" name = "field">decearatio</option>
+		</td>
+		<td>
+			<select name = "field">
+				<option value = "" ></option>
+              	<option value = "Transfrot" >
+              	Transfrot</option>
+               	<option value = "Halls" >Halls </option>
+               	<option value = "cretering" >cretering</option>
+               	<option value = "decearatio" >decearatio</option>
              </select>
-		</div>
+         </td>
+		</tr>
 
 
-		<div>
+		<tr>
+		<td>
 			<label>Email</label>
-			<input type="text" name="email" value= "<?php echo $email; ?>">
-		</div>
+		</td>
+		<td>
+			<input type="text" name="email" value= "">
+		</td>
+		
+		</tr>
 
-
-		<div>
+		<tr>
+		<td>
 			<label>Password</label>
-			<input type="text" name="pword" value= "<?php echo $pword; ?>">
-		</div>
+		</td>
+		<td>
+			<input type="text" name="pword" value= "">
+		</td>
+		</tr>
 
 
-		<div>
+		<tr>
+		<td>
 			<label>Confirm Password</label>
-			<input type="text" name="cpword" value= "<?php echo $cpword; ?>">
-		</div>
+		</td>
+		<td>
+			<input type="text" name="cpword" value= "">
+		</td>
+		</tr>
 
-
-		<div>
+		<tr>
+		<td>
 			<label>Contact Number</label>
-			<input type="text" name="cname" value= "<?php echo $cname; ?>">
-		</div>
+		</td>
+		<td>
+			<input type="text" name="cname" value= "">
+		</td>
+		</tr>
 
-
-
-		<div>
+		<tr>
+		<td>
 			<label>Address</label>
-			<input type="text" name="add" value= "<?php echo $add; ?>">
-		</div>
+		</td>
+		<td>
+			<input type="text" name="add" value= "">
+		</td>
+		</tr>
 
 
-		<div>
-			<input type="submit" name="submit">
+		<tr>
+		<td>
+			<input type="submit" name="submit" value="submit">
+		</td>
+		<td>
 			<input type="reset" name="reset">
-		</div>
+		</td>
+		</tr>
 
-
+		</table>
 
 
 		
