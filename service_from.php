@@ -18,7 +18,8 @@
 		$row = mysqli_num_rows($result);
 
 		if($row>0){
-			echo "You have Successfully Logged in";
+			//echo "You have Successfully Logged in";
+			 header("location:profile.php");
 			exit();		}
 
 		else
