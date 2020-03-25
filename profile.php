@@ -1,6 +1,6 @@
 <html>
 <head>
-<form name="newad" method="post" enctype="multipart/form-data" action="">
+<!---<form name="newad" method="post" enctype="multipart/form-data" action="">--->
 <title>Registration</title>
 
 <style type="text/css">
@@ -25,21 +25,25 @@
 		color: red;
 	}
 	body {
-		background: lightgray;
+		background: violet;
 	}
 </style>
 </head>
 
 <body>
-	SERVICE PROVIDER PROFILE
+	<center>SERVICE PROVIDER PROFILE</center>
 
 	
-	<tr><td><input type="file" name="image" ></td></tr>
+	<center><tr><td><input type="file" name="image" ></td></tr>
 	<tr><td><input name="Submit" type="submit" value="Upload image"></td></tr>
 	<img style="margin-left:25px;" src="upload2/avatar.png" width="200" height="200" />
 
-</form>
-	<fieldset>
+	<tr><td><input type="file" name="vedio" ></td></tr>
+	<tr><td><input name="Submit" type="submit" value="Upload vedio"></td></tr>
+	<video src="demo.webm" poster="initial_static_picture.jpg" width="480" controls>
+</video></center>
+
+	<!--<fieldset>
 	<h2>Member details</color></h2>
 
 	<label for="ptin">Current TIN Of Business Owner</label>
@@ -61,34 +65,35 @@
 	<label for="full name">Personal Phone Number </label>
 	<input type="tel" name="tel">
 	</p>
-	</fieldset>
+	</fieldset>-->
 	<fieldset>
-	<h2>Business Information</h2>
-	<p>
-	<label for="ptin">Current Company TIN </label>
-	<input type="text" name="ptin">
-	</p>
-	<p>
-	<label for="bname">Business Name</label>
-	<input type="text" name="bname">
-	</p>
-	<label for="full baddress">Address Of Current Business Location </label>
-	<input type="textarea" name="baddress">
-	</p>
-	<p>
-	<label for="option">Revenue Sector</label>
-	<select>
-	<option id="sector">
-	<option value="edu">Education</option>
-	<option value="env">Environment</option>
-	<option value="agric">Agriculture</option>
-	<option value="tourism">Tourism Beaureu</option>
-	<option value="tourism">#</option>
-	<option value="tourism">#</option>
-	</select>
-	</p>
-	<p>
-	<label for="option">Revenue Lot</label>
+			<h2>Business Information</h2>
+			<p>
+					<label for="ptin">Current Company Name  </label>
+					<input type="text" name="ptin">
+			</p>
+			<p>
+					<label for="bname">Company Owner Name</label>
+					<input type="text" name="bname">
+			</p>
+			<p>
+					<label for="full baddress">Address Of Current Business Location </label>
+					<input type="textarea" name="baddress">
+			</p>
+			<p>
+					<label for="option">Field</label>
+					<select>
+							<option id="sector">
+							<option value="edu">hall</option>
+							<option value="env">decoration</option>
+							<option value="agric">transfort</option>
+							<option value="tourism">Tourism Beaureu</option>
+							<option value="tourism">#</option>
+							<option value="tourism">#</option>
+					</select>
+			</p>
+	<!--<p>
+	<label for="option"></label>
 	<select>
 	<option id="rlot">
 	<option value="l1">Lot 1</option>
@@ -97,7 +102,18 @@
 	<option value="l4">Lot 4</option>
 	<option value="l4">Lot #</option>
 	<option value="l4">Lot #</option>
-	</select>
+	</select>-->
+
+			<p>
+					<label for="Cnum">Contact Number </label>
+					<input type="textarea" name="baddress">
+			</p>
+
+			<p>
+					<label for="info">Other information</label>
+					<input type="textarea" name="baddress" >
+			</p>
 	</fieldset>
-	<button type="submit">Add Payer</button>
+	<center><button type="submit">Add Details to the home page</button>
+	</center>
 </form>
